@@ -1,4 +1,3 @@
-cat Dockerfile 
 # 使用官方Python基础镜像  
 #FROM registry.cn-chengdu.aliyuncs.com/2631f/linux_arm64_python:3.8
 FROM python:3.8
