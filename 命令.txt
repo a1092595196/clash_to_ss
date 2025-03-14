@@ -8,3 +8,8 @@ docker run -it --rm --network host \
 -e PORT_START=10000 \
 -e MAX_PORTS=300 \
 python-requests:latest python clash_to_ss_only_w.py
+
+docker run -d --restart=always --network host registry.cn-chengdu.aliyuncs.com/2631f/linux_amd64_subconverter
+docker run -d --restart=always --network host registry.cn-chengdu.aliyuncs.com/2631f/linux_amd64_subconverter
+
+docker run -d --network host --name xray --restart=always -v /root/xray/config.json:/etc/xray/config.json registry.cn-chengdu.aliyuncs.com/2631f/linux_arm64_xray
