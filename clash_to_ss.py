@@ -227,6 +227,7 @@ def main():
         generate_xray_config(nodes)
         log(f"成功更新配置，共{len(nodes)}个节点")
         restart_cmd = "systemctl restart xray"
+        # restart_cmd = "docker restart xray"
         if os.system(restart_cmd) != 0:
             log("Xray服务重启失败，请手动检查")
     else:
