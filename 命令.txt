@@ -1,0 +1,10 @@
+docker build -t python-requests .  
+
+
+docker run -it --rm --network host \
+-v /root/py/:/usr/src/app/ \
+-e SUBCONVERTER_API="http://10.0.3.1:25500/sub" \
+-e CLASH_SUBSCRIPTIONS="" \
+-e PORT_START=10000 \
+-e MAX_PORTS=300 \
+python-requests:latest python clash_to_ss_only_w.py
