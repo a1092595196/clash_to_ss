@@ -17,7 +17,7 @@ PORT_START = int(os.getenv("PORT_START", 10000))
 MAX_PORTS = int(os.getenv("MAX_PORTS", 300))
 XRAY_CONFIG_PATH = os.getenv("XRAY_CONFIG_PATH", "/usr/local/etc/xray/config.json")
 LOG_FILE = os.getenv("LOG_FILE", "/var/log/clash_to_ss.log")
-DEFAULT_OBFS_HOST = os.getenv("DEFAULT_OBFS_HOST", "0a11ab2f647b.microsoft.com")  # 新增环境变量
+DEFAULT_OBFS_HOST = os.getenv("DEFAULT_OBFS_HOST", "")  # 新增环境变量
 
 def log(message):
     with open(LOG_FILE, "a") as f:
