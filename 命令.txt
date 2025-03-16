@@ -9,6 +9,16 @@ docker run -it --rm --network host \
 -e MAX_PORTS=300 \
 python-requests:latest python clash_to_ss_only_w.py
 
+docker run -it --rm --network host \
+-v /root/py/:/usr/src/app/ \
+-e SUBCONVERTER_API="http://127.0.0.1:25500/sub" \
+-e DEFAULT_OBFS_HOST="test.com" \
+-e DEBUG_MODE=0 \
+-e CLASH_SUBSCRIPTIONS="https://villa.parkson-market.org/api/v1/trails/bolster?token=3143630c69280c6e7a5731a96e6375fb" \
+-e PORT_START=10000 \
+-e MAX_PORTS=300 \
+python-requests:latest python clash_to_ss_only_w_OBFS_noport_nodebug.py
+
 docker run -d --restart=always --network host registry.cn-chengdu.aliyuncs.com/2631f/linux_amd64_subconverter
 docker run -d --restart=always --network host registry.cn-chengdu.aliyuncs.com/2631f/linux_amd64_subconverter
 
